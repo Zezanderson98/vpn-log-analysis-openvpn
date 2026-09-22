@@ -17,11 +17,11 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 2. Scroll to the **Visual Studio 2015, 2017, 2019, and 2022** matrix category section.
 3. Click the architecture package download link for **`vc_redist.x64.exe`** (64-bit Windows platforms).
 4. Run the downloaded executable as an Administrator, check the box to agree to the licensing terms and conditions, click **Install**, and restart your Windows 10 Pro host computer once setup completes.
+![Microsoft Prerequisite Installed](screenshots/install_1_1_microsoft_prerequisite.png)
 
-```text
-📸 PLACE SCREENSHOT HERE: [ Programs & Features list or installer screen displaying "Microsoft Visual C++ 2015-2022 Redistributable (x64) Setup Successful" ]
-Suggested filename: screenshots/install_1_1_microsoft_prerequisite.png
-```
+
+
+
 
 ### Step 1.2: Oracle VM VirtualBox Hypervisor Deployment
 1. Navigate to the official Oracle virtualization portal [https://virtualbox.org] and download the latest platform package installer for **Windows hosts**.
