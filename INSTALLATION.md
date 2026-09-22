@@ -12,10 +12,11 @@
 
 ### Step 1.1: Install Microsoft Visual C++ Core Prerequisites (Windows 10 Pro Host)
 Before provisioning the hypervisor core, the host operating system runtime libraries must be satisfied to prevent initialization failures on Windows 10 Pro.
-1. Open a web browser on your Windows 10 Pro host desktop and connect to the official Microsoft Visual Studio Support panel (`https://microsoft.com`).
-2. Scroll to the **Visual Studio 2015, 2017, 2019, and 2022** matrix category section.
-3. Click the architecture package download link for **`vc_redist.x64.exe`** (64-bit Windows platforms).
-4. Run the downloaded executable as an Administrator, check the box to agree to the licensing terms and conditions, click **Install**, and restart your Windows 10 Pro host computer once setup completes.
+1. Open a web browser on your Windows 10 Pro host desktop and connect to the official Microsoft Visual Studio Support panel
+2. *(`https://microsoft.com`).*
+3. Scroll to the **Visual Studio 2015, 2017, 2019, and 2022** matrix category section.
+4. Click the architecture package download link for **`vc_redist.x64.exe`** (64-bit Windows platforms).
+5. Run the downloaded executable as an Administrator, check the box to agree to the licensing terms and conditions, click **Install**, and restart your Windows 10 Pro host computer once setup completes.
 
 ```text
 📸 PLACE SCREENSHOT HERE: [ Programs & Features list or installer screen displaying "Microsoft Visual C++ 2015-2022 Redistributable (x64) Setup Successful" ]
