@@ -46,7 +46,7 @@ Suggested filename: screenshots/install_1_2_virtualbox.png
 2. Configure the following parameter blocks:
    * **Name:** `Ubuntu-SOC-Lab`
    * **Folder:** Leave as default path.
-   * **ISO Image:** Click the dropdown arrow, select **Other**, browse to your Windows Downloads folder, and select your downloaded `ubuntu-22.04-xxx.iso` file.
+   * **ISO Image:** Click the dropdown arrow, select **Other**, browse to your Windows Downloads folder, and select your downloaded `ubuntu-22.04.5-live-server-amd64` file.
    * **Type:** Linux
    * **Version:** Ubuntu (64-bit)
 3. Check the box for **Skip Unattended Installation** if prompted, then click **Next**.
@@ -146,7 +146,7 @@ Modify system initialization maps to enforce permanent file share attachment acr
    *`cd` moves you into the folder. `ls` lists the files inside (you should see the contents of your Windows Downloads folder).*
 2. **Tip:** If you want this to mount automatically on boot, add the following line to `/etc/fstab`:
    ```text
-   Downloads /home/yourusername/windows_downloads vboxsf defaults 0 0
+   Downloads /home/zez012/windows_downloads vboxsf defaults 0 0
    ```
 3. Open the file with root privileges:
    ```bash
@@ -156,7 +156,7 @@ Modify system initialization maps to enforce permanent file share attachment acr
    ```text
    Downloads /home/zez012/windows_downloads vboxsf defaults 0 0
    ```
-   *(Replace yourusername with your actual Ubuntu username.)*
+  
 5. Save and exit (`Ctrl+O`, `Enter`, then `Ctrl+X` in nano).
 6. Apply the changes by either rebooting or running:
    ```bash
