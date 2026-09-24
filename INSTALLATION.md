@@ -130,10 +130,15 @@ Set up the shared folder in VirtualBox to pass installer files from the host to 
    * **Folder Name:** e.g., `Downloads`.
    * Check **Auto-mount** and **Make Permanent** if you want it always available.
 
-```text
-📸 PLACE SCREENSHOT HERE: [ Shared Folders settings panel showcasing the active mapping to your Windows Downloads folder ]
-Suggested filename: screenshots/install_2_1_shared_folder.png
-```
+
+**Shared Folders settings panel showcasing the active mapping to your Windows Downloads folder**
+
+<img width="1365" height="768" alt="cyborg" src="https://github.com/user-attachments/assets/ec3bce8d-4361-440a-8a3c-ee7ac49d0856" />
+
+
+
+
+
 
 ### Step 2.2: Mounting the Shared Directory Inside Ubuntu Core
 Manually link the hypervisor folder mapping to a persistent path inside the guest shell.
