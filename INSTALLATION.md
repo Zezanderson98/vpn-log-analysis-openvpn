@@ -27,7 +27,9 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 2. Run the downloaded executable file (`VirtualBox-xx-Win.exe`) using standard administrative privileges on your Windows 10 Pro machine.
 3. Step through the setup wizard windows, keeping all default configuration options (Core components, networking interfaces, and shortcuts) selected.
 4. Click **Install**, wait for the process bar to finish executing, and click **Finish** to open the VirtualBox Manager dashboard.
-[ VirtualBox Manager interface displaying clean initialization state before VM provisioning ]
+
+
+ **VirtualBox Manager interface displaying clean initialization state before VM provisioning** 
 
 <img width="1366" height="768" alt="2026-09-23 (1)" src="https://github.com/user-attachments/assets/66269619-6cb8-4fa6-98e2-d33fea65dd02" />
 
