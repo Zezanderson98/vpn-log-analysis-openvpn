@@ -1,3 +1,53 @@
+
+# 🛡️ SOC Analysis & Active Incident Response Pipeline Lab
+**NIST SP 800-61 r2 Standardized Project Showcase Portfolio**
+
+---
+
+> [!NOTE]
+> ### 🎯 Objective
+> To investigate a critical perimeter authentication alert flagging repeated Multi-Factor Authentication (MFA) failures followed by an account lockout on the corporate VPN gateway. The goal was to determine if this was a brute-force attack or a malicious credential compromise, trace the root cause vector, and autonomously contain the threat actor.
+
+> [!IMPORTANT]
+> ### 🔌 Data Sources
+> Telemetry aggregation was managed via a Splunk Universal Forwarder pipeline (`inputs.conf`) streaming from an Ubuntu 22.04 LTS (Jammy Jellyfish) gateway into a centralized Splunk SIEM workspace (`index="main"`):
+> * `openvpn.log`: Ingress source connection profiles, connection handshakes, and gateway session states.
+> * `auth.log`: Linux PAM framework triggers and Google Authenticator TOTP challenge failures.
+> * `fail2ban.log`: Real-time automated firewall containment timestamps and active IP drop lists.
+> * **External Threat Intel:** VirusTotal sandboxed url detonation logs and Proofpoint email gateway transaction histories.
+
+> [!NOTE]
+> ### 🔄 Steps (Chronological IR Workflow)
+> 1. **Triage:** Opened the SIEM alert, taken ownership (**New ➔ In Progress**), and isolated the attacker's IP (`68.125.245.23`).
+> 2. **Reputation Assessment:** Cross-referenced the source IP through global intelligence feeds to flag severe geographic anomalies.
+> 3. **SIEM Correlation:** Executed advanced Splunk queries to map the timeline of primary password success and the subsequent triple MFA failure blocks.
+> 4. **Asset Validation:** Checked the connecting host (`UZEZI-VPN-SRV`) against the CMDB database to flag it as an unregistered rogue device, and baselined the user’s legitimate host profile (`DESKTOP-9UMROOI`).
+> 5. **Root Cause Analysis:** Audited inbound mail gateways to track a weaponized **PayPal** lookalike lure (`accounts-verification@paypal.com`) sent from IP `185.31.27.181`.
+> 6. **Sandbox Detonation:** Triaged the phishing hyperlink using VirusTotal to track a multi-redirect chain routing straight through Poland (`↳ allegrolokalnie.pl/zzee`).
+> 7. **Containment & Recovery:** Blocked the sender infrastructure (`dominique.silva@globalschool.cl`) via email gateway filters, initiated Active Directory password resets, terminated cached access tokens, and safely flushed the Fail2ban firewall cache via the `unbanip` control line.
+
+> [!TIP]
+> ### 📊 Findings
+> Forensics confirmed a successful initial access and credential harvesting breach. The user `Zez.Boy` clicked a lookalike email lure and surrendered active credentials on a rogue web application in Poland. The threat actor bypassed the primary boundary using correct credentials, but was completely neutralized at the secondary boundary because they lacked access to the user's out-of-band physical mobile device token. This triggered an autonomous system ban after 3 failed OTP entry attempts, keeping corporate data completely secure.
+
+> [!WARNING]
+> ### 🚀 Improvements (Strategic Engineering Hardening)
+> * **Advanced Anti-Phishing:** Deploy proactive content filtering and real-time link protection sandboxing at the mail gateway layer to drop lookalike domains before user interaction can occur.
+> * **SIEM Playbook Optimization:** Develop automated correlation alerts to instantly flag active login profiles if primary password validation passes from an *unregistered hostname* or an IP address severely deviating from the historical baseline.
+> * **User Conditioning:** Automatically enroll employees who fail standard email click indicators into targeted training modules focused on advanced credential harvesting mechanics.
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🛡️ End-to-End SOC Analysis & Active Incident Response Pipeline Lab
 [![Splunk](https://shields.io)](https://www.splunk.com)
 [![OS](https://shields.io)](https://ubuntu.com)
