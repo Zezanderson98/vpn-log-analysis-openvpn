@@ -24,7 +24,8 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 
 ### Step 1.2: Oracle VM VirtualBox Hypervisor Deployment
 1. Navigate to the official Oracle virtualization portal [https://virtualbox.org] and download the latest platform package installer for **Windows hosts**.
-2. Run the downloaded executable file (`VirtualBox-xx-Win.exe`) using standard administrative privileges on your Windows 10 Pro machine.
+2. Run the downloaded executable file (`VirtualBox-7.2.14-174565-Win<img width="1363" height="766" alt="ubuntu22" src="https://github.com/user-attachments/assets/f951e5b6-ebb7-4725-bda4-1c6ec8fa6975" />
+`) using standard administrative privileges on your Windows 10 Pro machine.
 3. Step through the setup wizard windows, keeping all default configuration options (Core components, networking interfaces, and shortcuts) selected.
 4. Click **Install**, wait for the process bar to finish executing, and click **Finish** to open the VirtualBox Manager dashboard.
 
@@ -63,10 +64,10 @@ Before provisioning the hypervisor core, the host operating system runtime libra
    * Select **Create a Virtual Hard Disk Now**.
    * Set the disk size space to a minimum allocation limit of **30 GB** to account for database log ingestion pipelines. Click **Next** and then click **Finish**.
 
-```text
-📸 PLACE SCREENSHOT HERE: [ VirtualBox Manager panel showing the fresh Ubuntu-SOC-Lab VM shell listed in the left-hand column ]
-Suggested filename: screenshots/install_1_4_vm_shell.png
-```
+
+**VirtualBox Manager panel showing the fresh Ubuntu(defender infrastructure) VM shell listed in the left-hand column**
+
+<img width="1363" height="766" alt="ubuntu22" src="https://github.com/user-attachments/assets/8b0d5060-ee5b-43bc-bf0d-c150e11d6367" />
 
 ---
 
