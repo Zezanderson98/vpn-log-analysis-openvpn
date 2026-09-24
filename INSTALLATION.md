@@ -109,10 +109,13 @@ To simulate an investigation where traffic comes from an external source IP, you
    * Under **Adapter 1**, ensure it is checked "Enable Network Adapter" and attached to **NAT**.
    * Click on the **Adapter 2** tab, check the box to **Enable Network Adapter**, and change it to **Host-only Adapter**.
 
-```text
-📸 PLACE SCREENSHOT HERE: [ VirtualBox Network configuration window displaying Adapter 1 (NAT) and Adapter 2 (Host-only) metrics ]
-Suggested filename: screenshots/install_1_6_network_adapters.png
-```
+
+
+**VirtualBox Network configuration window displaying Adapter 1 (NAT) and Adapter 2 (Host-only) metrics**
+
+<img width="1365" height="768" alt="gbese 1" src="https://github.com/user-attachments/assets/7e7a405a-8bb4-426d-945e-2362d8e89663" />
+<img width="1349" height="764" alt="gbese 2" src="https://github.com/user-attachments/assets/ec020ed1-02c4-4767-a0ba-0ac9b591dfd7" />
+
 
 ---
 
