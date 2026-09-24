@@ -6,8 +6,6 @@
 **Guest Environment Platform:** Ubuntu Linux 22.04 LTS Monitored Gateway Core  
 
 
-<img width="803" height="559" alt="VirtualBox_lvL7IZYI6t" src="https://github.com/user-attachments/assets/d3c52cce-6bee-421d-90db-0ce14e437061" />
-
 
 ## 💻 Section 1: Hypervisor & Virtual Machine Environment Engineering
 
@@ -30,10 +28,15 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 3. Step through the setup wizard windows, keeping all default configuration options (Core components, networking interfaces, and shortcuts) selected.
 4. Click **Install**, wait for the process bar to finish executing, and click **Finish** to open the VirtualBox Manager dashboard.
 
-```text
-📸 PLACE SCREENSHOT HERE: [ install virtualbox ]
-Suggested filename: 
-```
+
+<img width="1366" height="768" alt="2026-09-23 (1)" src="https://github.com/user-attachments/assets/66269619-6cb8-4fa6-98e2-d33fea65dd02" />
+
+
+
+
+
+
+
 
 ### Step 1.3: Download the Ubuntu Jammy Jellyfish Operating System ISO
 1. Access the official Ubuntu image distribution website [https://ubuntu.com].
