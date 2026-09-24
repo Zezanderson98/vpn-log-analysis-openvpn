@@ -31,8 +31,8 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 4. Click **Install**, wait for the process bar to finish executing, and click **Finish** to open the VirtualBox Manager dashboard.
 
 ```text
-📸 PLACE SCREENSHOT HERE: [ VirtualBox Manager interface displaying clean initialization state before VM provisioning ]
-Suggested filename: install virtualbox
+📸 PLACE SCREENSHOT HERE: [ install virtualbox ]
+Suggested filename: 
 ```
 
 ### Step 1.3: Download the Ubuntu Jammy Jellyfish Operating System ISO
