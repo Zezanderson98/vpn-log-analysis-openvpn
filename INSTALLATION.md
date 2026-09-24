@@ -89,10 +89,18 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 6. Wait for the file extraction script wizard to finish executing. Once the dialog box prompts you with *Installation Complete*, click **Restart Now**.
 7. When the console text prints the instruction *Please remove the installation medium, then press ENTER*, tap the **Enter** key on your keyboard to complete the OS baseline initialization process.
 
-```text
-📸 PLACE SCREENSHOT HERE: [ Ubuntu 22.04 LTS Monitored Gateway presentation layout presenting a clean login verification portal ]
-Suggested filename: screenshots/install_1_5_ubuntu_login.png
-```
+
+
+
+ **Ubuntu 22.04 LTS Monitored Gateway presentation layout presenting a clean login verification portal**
+
+
+<img width="800" height="600" alt="zez012" src="https://github.com/user-attachments/assets/2d5b7909-2211-4519-aafa-fb4f23501097" />
+
+
+
+
+
 
 ### Step 1.6: Dual-Adapter Network Topology Customization
 To simulate an investigation where traffic comes from an external source IP, your Ubuntu VM needs to be accessible from your Windows 10 Pro host machine or a lab network.
