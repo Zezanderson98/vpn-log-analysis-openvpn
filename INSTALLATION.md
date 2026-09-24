@@ -32,7 +32,7 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 
 ```text
 📸 PLACE SCREENSHOT HERE: [ VirtualBox Manager interface displaying clean initialization state before VM provisioning ]
-Suggested filename: screenshots/install_1_2_virtualbox.png
+Suggested filename: install virtualbox
 ```
 
 ### Step 1.3: Download the Ubuntu Jammy Jellyfish Operating System ISO
