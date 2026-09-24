@@ -51,7 +51,7 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 ### Step 1.4: Provision the Virtual Machine Shell in VirtualBox
 1. Open the VirtualBox Manager console and click the **New** (blue star) button to open the VM creation wizard.
 2. Configure the following parameter blocks:
-   * **Name:** `Ubuntu-SOC-Lab`
+   * **Name:** `Ubuntu(defender infrastructure)`
    * **Folder:** Leave as default path.
    * **ISO Image:** Click the dropdown arrow, select **Other**, browse to your Windows Downloads folder, and select your downloaded `ubuntu-22.04.5-live-server-amd64` file.
    * **Type:** Linux
