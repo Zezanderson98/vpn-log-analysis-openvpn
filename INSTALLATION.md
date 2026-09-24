@@ -6,7 +6,7 @@
 **Guest Environment Platform:** Ubuntu Linux 22.04 LTS Monitored Gateway Core  
 
 
-
+https://1drv.ms/i/c/fd382950d7c1c8f9/IQAO7YSInH1lTrklyZZXOgzDAeFXC8z0XtSITtKzdAGDOtI?e=OjClaf
 ---
 
 ## 💻 Section 1: Hypervisor & Virtual Machine Environment Engineering
