@@ -131,7 +131,7 @@ Set up the shared folder in VirtualBox to pass installer files from the host to 
    * Check **Auto-mount** and **Make Permanent** if you want it always available.
 
 
-**Shared Folders settings panel showcasing the active mapping to your Windows Downloads folder**
+**Shared Folders settings panel showcasing the active mapping to my Windows Downloads folder**
 
 <img width="1365" height="768" alt="cyborg" src="https://github.com/user-attachments/assets/ec3bce8d-4361-440a-8a3c-ee7ac49d0856" />
 
