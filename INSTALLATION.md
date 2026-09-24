@@ -154,10 +154,16 @@ Manually link the hypervisor folder mapping to a persistent path inside the gues
      ```
      *(Here Downloads is the folder name you set in VirtualBox settings.)*
 
-```text
-📸 PLACE SCREENSHOT HERE: [ Linux terminal executing the mount string with zero error flags generated ]
-Suggested filename: screenshots/install_2_2_manual_mount.png
-```
+
+**Linux terminal executing the mount string with zero error flags generated**
+
+<img width="800" height="600" alt="windows downloads" src="https://github.com/user-attachments/assets/655ac97d-e4c1-40b7-acc2-bd74f3b7cf25" />
+
+
+
+
+
+
 
 ### Step 2.3: Automating Mount Persistence on Boot
 Modify system initialization maps to enforce permanent file share attachment across operating system reboot windows.
