@@ -24,8 +24,7 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 
 ### Step 1.2: Oracle VM VirtualBox Hypervisor Deployment
 1. Navigate to the official Oracle virtualization portal [https://virtualbox.org] and download the latest platform package installer for **Windows hosts**.
-2. Run the downloaded executable file (`VirtualBox-7.2.14-174565-Win<img width="1363" height="766" alt="ubuntu22" src="https://github.com/user-attachments/assets/f951e5b6-ebb7-4725-bda4-1c6ec8fa6975" />
-`) using standard administrative privileges on your Windows 10 Pro machine.
+2. Run the downloaded executable file (`VirtualBox-7.2.14-174565-Win') using standard administrative privileges on your Windows 10 Pro machine.
 3. Step through the setup wizard windows, keeping all default configuration options (Core components, networking interfaces, and shortcuts) selected.
 4. Click **Install**, wait for the process bar to finish executing, and click **Finish** to open the VirtualBox Manager dashboard.
 
