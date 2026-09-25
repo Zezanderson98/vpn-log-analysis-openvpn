@@ -67,7 +67,7 @@ This repository documents the architectural deployment and live execution of a *
 To ensure realistic log generation and threat behavior replication, the entire target environment was isolated inside a hypervisor structure using **Oracle VM VirtualBox**:
 
 ### 1. Guest Operating System Config
-*   **OS Platform:** Ubuntu Linux 64-bit Server
+*   **OS Platform:** Ubuntu 22.04 LTS (Jammy Jellyfish) Server
 *   **Security Context:** Hardened kernel instance serving as the primary corporate network resource plane. Holds the destination paths for Splunk, OpenVPN endpoints, and the security configuration files (`/etc/fstab` storage parameters).
 
 ### 2. Dual-Adapter Network Topology Engineering
