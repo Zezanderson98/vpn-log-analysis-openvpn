@@ -80,8 +80,8 @@ Before provisioning the hypervisor core, the host operating system runtime libra
    * **Installation Type:** Choose **Erase disk and install Ubuntu** (this safely deletes the blank virtual disk inside the hypervisor, not your Windows 10 Pro host data). Click **Install Now**, then click **Continue** to confirm writing partition maps to the virtual disk.
    * **Where are you?** Select your current geographic timezone and click Continue.
 5. Configure **User Persona Creation Details**:
-   * **Your name:** `Zezboy Zezson`
-   * **Your computer's name:** `ubuntu-soc-node`
+   * **Your name:** `Uzezi`
+   * **Your computer's name:** `Ubuntu(defender infrastructure)`
    * **Pick a username:** `zez012`
    * **Choose a password:** Enter a strong password and re-enter it to verify.
    * Select **Require my password to log in**. Click Continue.
