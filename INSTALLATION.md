@@ -3,7 +3,7 @@
 **Document Context:** Blue-Team Engineering Sandbox Environment Provisioning Blueprint  
 **Target Environment:** Oracle VM VirtualBox Hypervisor Engine  
 **Host Architecture Integration:** Windows 10 Pro Local Workspace  
-**Guest Environment Platform:** Ubuntu Linux 22.04 LTS Monitored Gateway Core  
+**Guest Environment Platform:** Ubuntu Linux 22.04.5 LTS Monitored Gateway Core  
 
 
 
@@ -42,7 +42,7 @@ Before provisioning the hypervisor core, the host operating system runtime libra
 
 ### Step 1.3: Download the Ubuntu Jammy Jellyfish Operating System ISO
 1. Access the official Ubuntu image distribution website [https://ubuntu.com].
-2. Click on the download link for the **Ubuntu 22.04.x LTS (Jammy Jellyfish) Desktop or Server ISO image**.
+2. Click on the download link for the **Ubuntu 22.04.5 LTS (Jammy Jellyfish) Desktop or Server ISO image**.
 3. Save the file into your local Windows 10 Pro host computer's **Downloads** folder. Ensure the download completes fully before provisioning the VM.
 
 ---
@@ -80,7 +80,7 @@ Before provisioning the hypervisor core, the host operating system runtime libra
    * **Installation Type:** Choose **Erase disk and install Ubuntu** (this safely deletes the blank virtual disk inside the hypervisor, not your Windows 10 Pro host data). Click **Install Now**, then click **Continue** to confirm writing partition maps to the virtual disk.
    * **Where are you?** Select your current geographic timezone and click Continue.
 5. Configure **User Persona Creation Details**:
-   * **Your name:** `Uzezi`
+   * **Your name:** `uzezi`
    * **Your computer's name:** `Ubuntu(defender infrastructure)`
    * **Pick a username:** `zez012`
    * **Choose a password:** Enter a strong password and re-enter it to verify.
