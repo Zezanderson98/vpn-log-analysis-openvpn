@@ -37,7 +37,7 @@ graph TD
         end
 
         %% Monitored Gateway Instance
-        subgraph Ubuntu_Gateway_Core ["Ubuntu 22.04 LTS Monitored Gateway Core"]
+        subgraph Ubuntu_Gateway_Core ["Ubuntu 22.04.5 LTS Monitored Gateway Core"]
             G -->|"UDP Port 1194 Ingress"| H["OpenVPN Server Engine"]
             H -->|"Chained Auth Check"| I["PAM Framework Layer"]
             I -->|"Out-of-Band Validation"| J["Google Authenticator TOTP Core"]
@@ -80,7 +80,7 @@ graph TD
 
 **The Defense In Depth Layer**
 
-Traffic hits the Ubuntu 22.04 LTS Monitored Gateway Core via UDP Port 1194. Ingress authentication rules trigger Pluggable Authentication Modules (PAM) to chain system access controls with out-of-band Google Authenticator validation maps.
+Traffic hits the Ubuntu 22.04.5 LTS Monitored Gateway Core via UDP Port 1194. Ingress authentication rules trigger Pluggable Authentication Modules (PAM) to chain system access controls with out-of-band Google Authenticator validation maps.
 
 **The SIEM Ingestion Route:** A Splunk Universal Forwarder agent constantly trails your live logging pipelines (inputs.conf), compressing security log frames from OpenVPN, Linux Security Accounts (auth.log), and active Fail2Ban jail states before routing data over TCP Port 9997 straight to the core database indexes (index="main").
 
