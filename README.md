@@ -74,7 +74,14 @@ graph TD
     style SIEM_Analytics fill:#e2ffe2,stroke:#55ff55,stroke-width:2px;
 ```
 
+## 🔍  Architectural Flow Explained 
 
+**The Attack Path:** The threat actor launches traffic from an unmanaged machine context using standard host-only adapter network boundaries (192.168.56.X), forcing your physical Windows 10 Pro environment to act as the adversarial origin vector.
+
+**The Defense In Depth Layer**
+Traffic hits the Ubuntu 22.04 LTS Monitored Gateway Core via UDP Port 1194. Ingress authentication rules trigger Pluggable Authentication Modules (PAM) to chain system access controls with out-of-band Google Authenticator validation maps.
+
+**The SIEM Ingestion Route:** A Splunk Universal Forwarder agent constantly trails your live logging pipelines (inputs.conf), compressing security log frames from OpenVPN, Linux Security Accounts (auth.log), and active Fail2Ban jail states before routing data over TCP Port 9997 straight to the core database indexes (index="main").
 
 
 > [!NOTE]
