@@ -16,6 +16,64 @@
 > * `fail2ban.log`: Real-time automated firewall containment timestamps and active IP drop lists.
 > * **External Threat Intel:** VirusTotal sandboxed url detonation logs and Proofpoint email gateway transaction histories.
 
+## Lab Architecture Diagram
+
+
+graph TD
+    %% External Threat Domain
+    subgraph External_Threat_Infrastructure [External Threat Domain]
+        A[Attacker Machine<br>IP: 68.125.245.23] -->|1. Stolen Credentials / OpenVPN Connection Request| E[Windows 10 Pro Host PC]
+        B[Phishing Email Sender<br>dominique.silva@globalschool.cl] -->|Spoofed PayPal Link| C[User: Zez.Boy]
+    end
+
+    %% Hypervisor Layer
+    subgraph VirtualBox_Hypervisor [Hypervisor: Oracle VM VirtualBox]
+        
+        %% Host Machine Network Plane
+        subgraph Host_Network_Plane [Host Egress Plan Interface]
+            E -->|Virtual Adapter Egress| F(Adapter 1: NAT)
+            E -->|Private Perimeter Tunnel| G(Adapter 2: Host-Only Interface<br>192.168.56.X Subnet)
+        end
+
+        %% Monitored Gateway Instance
+        subgraph Ubuntu_Gateway_Core [Ubuntu 22.04 LTS Monitored Gateway Core]
+            G -->|UDP Port 1194 Ingress| H[OpenVPN Server Engine]
+            H -->|Chained Auth Check| I[PAM Framework Layer]
+            I -->|Out-of-Band Validation| J[Google Authenticator TOTP Core]
+            
+            %% Threat Logs Production
+            H -->|Event Ingress Stream| K[/var/log/openvpn.log]
+            I -->|Authentication Errors| L[/var/log/auth.log]
+            
+            %% Intrusion Mitigation Engine
+            M[Fail2Ban Daemon] -->|Monitors Errors / Applies Regex| L
+            M -->|Monitors Activity| K
+            M -->|Logs Banning Actions| N[/var/log/fail2ban.log]
+            M -->|Dynamic Firewall Block| O[IPTables Defensive Drop Policy]
+            
+            %% Log Forwarding Pipeline
+            P[Splunk Universal Forwarder] -->|Monitors inputs.conf Paths| K
+            P -->|Monitors inputs.conf Paths| L
+            P -->|Monitors inputs.conf Paths| N
+        end
+
+        %% Central Analytics Engine
+        subgraph SIEM_Analytics [Central SIEM Workspace]
+            P -->|Encrypted Forwarding Core TCP Port 9997| Q[Splunk Enterprise Server]
+            Q -->|Web UI Management Interface Port 8000| R[Splunk Search & Reporting Core index='main']
+        end
+    end
+
+    %% Port Forwarding Logic linking Back to Host Browser
+    R -.->|Port Forwarded Rule| S[Windows Host Web Browser<br>http://127.0.0.1:8000]
+
+    %% Color Adjustments
+    style External_Threat_Infrastructure fill:#ffdddd,stroke:#ff5555,stroke-width:2px;
+    style Ubuntu_Gateway_Core fill:#ddf4ff,stroke:#55aaff,stroke-width:2px;
+    style SIEM_Analytics fill:#e2ffe2,stroke:#55ff55,stroke-width:2px;
+
+
+
 > [!NOTE]
 > ### 🔄 Steps (Chronological IR Workflow)
 > 1. **Triage:** Opened the SIEM alert, taken ownership (**New ➔ In Progress**), and isolated the attacker's IP (`68.125.245.23`).
